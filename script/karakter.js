@@ -11,7 +11,7 @@ $(function () {
        
         navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
         items: 1,
-        stagePadding: 60,
+        stagePadding: 35,
         
     });
 
