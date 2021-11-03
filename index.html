@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Outcast Desire</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+
+	<!-- Font Awesome if you need it
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  -->
+	<!-- <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css">  -->
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<!--Replace with your tailwind.css once created-->
+
+</head>
+
+<body class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-purple-800">
+
+	<!-- This example requires Tailwind CSS v2.0+ -->
+	<nav class="bg-gray-800">
+		<div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+			<div class="relative flex items-center justify-between h-16">
+				<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+					<!-- Mobile menu button-->
+					<button type="button"
+						class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+						aria-controls="mobile-menu" aria-expanded="false">
+						<span class="sr-only">Open main menu</span>
+						<!--
+			  Icon when menu is closed.
+  
+			  Heroicon name: outline/menu
+  
+			  Menu open: "hidden", Menu closed: "block"
+			-->
+						<svg id="buka-tutup-menu" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+							viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								d="M4 6h16M4 12h16M4 18h16" />
+						</svg>
+						<!--
+			  Icon when menu is open.
+  
+			  Heroicon name: outline/x
+  
+			  Menu open: "block", Menu closed: "hidden"
+			-->
+						<svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+							stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</button>
+				</div>
+				<div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+					<div class="flex-shrink-0 flex items-center">
+						
+							
+						<img src="./img/logo.png" class="block lg:hidden h-8 w-auto">
+
+						<img src="./img/logo.png" class="hidden lg:block h-8 w-auto">
+					</div>
+					<div class="hidden sm:block sm:ml-6">
+						<div class="flex space-x-4">
+							<!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+							<a href="./index.html"
+								class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+								aria-current="page">Blurb</a>
+
+							<a href="./karakter.html"
+								class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Karakter</a>
+
+
+						</div>
+					</div>
+				</div>
+				<div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+
+					<!-- Profile dropdown -->
+					<div class="ml-3 relative">
+						<div>
+
+							<button class="js-change-theme focus:outline-none h-8 w-8">🌙</button>
+						
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Mobile menu, show/hide based on menu state. -->
+		<div class="sm:hidden hidden" id="mobile-menu">
+			<div class="px-2 pt-2 pb-3 space-y-1">
+				<!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+				<a href="./index.html" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+					aria-current="page">Blurb</a>
+
+				<a href="./karakter.html"
+					class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Karakter</a>
+
+			</div>
+		</div>
+	</nav>
+
+
+
+
+	<div class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
+
+
+	
+		<!--Main Col-->
+		<div id="profile"
+			class="w-full md:ml-7 md md:w-3/5 md:mx-0 md:rounded-l-md md:rounded-r-none  lg:w-3/5  
+			rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-90 mx-6 lg:mx-0">
+
+
+			<div class="p-4 md:p-12 text-center lg:text-left">
+				<!-- Image for mobile view-->
+				<div class="md:hidden lg:hidden shadow-xl mx-auto -mt-32 h-80 w-48 bg-cover bg-center"
+					style="background-image: url('./img/cover.png')"></div>
+
+				<h1 class="text-3xl font-bold pt-8 lg:pt-0">Outcast Desire</h1>
+				<div class="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
+				<!-- <p class="pt-4 text-base font-bold flex items-center justify-center lg:justify-start"><svg class="h-4 fill-current text-green-700 pr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z"/></svg> What you do</p>
+			<p class="pt-2 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start"><svg class="h-4 fill-current text-green-700 pr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm7.75-8a8.01 8.01 0 0 0 0-4h-3.82a28.81 28.81 0 0 1 0 4h3.82zm-.82 2h-3.22a14.44 14.44 0 0 1-.95 3.51A8.03 8.03 0 0 0 16.93 14zm-8.85-2h3.84a24.61 24.61 0 0 0 0-4H8.08a24.61 24.61 0 0 0 0 4zm.25 2c.41 2.4 1.13 4 1.67 4s1.26-1.6 1.67-4H8.33zm-6.08-2h3.82a28.81 28.81 0 0 1 0-4H2.25a8.01 8.01 0 0 0 0 4zm.82 2a8.03 8.03 0 0 0 4.17 3.51c-.42-.96-.74-2.16-.95-3.51H3.07zm13.86-8a8.03 8.03 0 0 0-4.17-3.51c.42.96.74 2.16.95 3.51h3.22zm-8.6 0h3.34c-.41-2.4-1.13-4-1.67-4S8.74 3.6 8.33 6zM3.07 6h3.22c.2-1.35.53-2.55.95-3.51A8.03 8.03 0 0 0 3.07 6z"/></svg> Your Location - 25.0000° N, 71.0000° W</p> -->
+				<p class="pt-8 text-xs text-justify">
+					Caltanepent, monster tumbuhan yang merusak segala ekosistem makhluk hidup di Jerman utara, selama 2
+					tahun lebih pemerintah melakukan penyerangan hingga wilayah di sana rusak parah dan menjadi
+					kota-kota mati, tetapi monster itu tidak ada habisnya.
+
+				</p>
+				<p class="pt-2 text-xs text-justify">
+
+					Sampai akhirnya muncul PMC (Private Military Company) bernama Aegis, yang bekerja untuk mencegah
+					penyebaran Caltanepent dan mengelola proyek E.C.R (Experiment Of Caltanepent Resource) yang telah
+					menghasilkan sumber daya Caltanepent bernama Exceed. 7 tahun terlewat, sekarang mereka telah
+					membangun cabang di Antartika yang dikabarkan sebagai markas khusus penelitian tersebut.
+
+				</p>
+
+				<p class="pt-2 text-xs text-justify">
+					Beberapa tim Aegis yang berhubungan proyek E.C.R dikirim ke markas Antartika, salah satunya adalah
+					seorang prajurit bernama Welrod dan rekannya A02. Namun, di tengah perjalanan ke kapal besar,
+					helikopter mereka diserang oleh Gaia, sebuah organisasi misterius yang sudah lama mengincar Exceed,
+					mereka berdua pun terpaksa bertahan hidup di tanah penuh Caltanepent.
+
+				</p>
+
+				<!-- <div class="pt-3">Genre</div> -->
+				<div class="mx-auto lg:mx-0 w-6/5 pt-3 mb-3 border-b-2 border-green-500 opacity-25"></div>
+
+				<div class="inline py-2 px-5 text-xs bg-green-700 text-white rounded-full">Aksi</div>
+				<div class="inline py-2 px-5 text-xs bg-green-700 text-white rounded-full">Fiksi Ilmiah Ringan</div>
+				<div class="inline py-2 px-5 text-xs bg-green-700 text-white rounded-full">Monster</div>
+				<div class="inline py-2 px-5 text-xs bg-green-700 text-white rounded-full">Misteri</div>
+
+
+				<div class="mx-auto lg:mx-0 w-6/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
+				
+
+
+
+				<div class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
+					<!-- <a class="link" href="#" data-tippy-content="@youtube_handle"><svg
+							class="h-6 fill-current text-gray-600 hover:text-green-700" role="img"
+							xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<title>YouTube</title>
+							<path
+								d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z" />
+						</svg></a>  -->
+
+						<a class="link" href="https://www.storial.co/book/outcast-desir-1" data-tippy-content="Storial">
+							<img class="h-10 fill-current text-gray-600 hover:text-green-700" src="https://cdn.idntimes.com/content-images/avatar/storial_100x100.png?v=8088a135145da88e3bc2f21f6e312d03" alt="">
+							
+						
+					</a>
+
+					<a class="link" href="#" data-tippy-content="Wattpad">
+						<img class="h-6 fill-current text-gray-600 hover:text-green-700" src="https://theme.zdassets.com/theme_assets/58997/7405ca8aea3281b272a0f6684342f8e34415aee7.png" alt="">
+						
+					
+				</a>
+
+					
+				</div>
+
+				<!-- Use https://simpleicons.org/ to find the svg for your preferred product -->
+
+			</div>
+
+		</div>
+
+		<!--Img Col-->
+		<div class="w-full lg:w-2/1 md:w-2/6">
+			<!-- Big profile image for side bar (desktop) -->
+			<img src="./img/cover.png"
+				class="rounded-none hidden lg:rounded-lg shadow-2xl lg:block md:rounded-md md:block">
+			<!-- Image from: http://unsplash.com/photos/MP0IUfwrn0A -->
+
+		</div>
+
+	</div>
+
+	<script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/tippy.js@4"></script>
+	<script src="./script/index.js"></script>
+
+</body>
+
+</html>

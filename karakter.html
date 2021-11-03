@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Outcast Desire</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+
+
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+		integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!--Replace with your tailwind.css once created-->
+
+</head>
+
+
+
+<body class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-purple-800">
+
+	<!-- This example requires Tailwind CSS v2.0+ -->
+	<nav class="bg-gray-800 sticky top-0 z-50">
+		<div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+			<div class="relative flex items-center justify-between h-16">
+				<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+					<!-- Mobile menu button-->
+					<button type="button"
+						class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+						aria-controls="mobile-menu" aria-expanded="false">
+						<span class="sr-only">Open main menu</span>
+						<!--
+			  Icon when menu is closed.
+  
+			  Heroicon name: outline/menu
+  
+			  Menu open: "hidden", Menu closed: "block"
+			-->
+						<svg id="buka-tutup-menu" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+							viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								d="M4 6h16M4 12h16M4 18h16" />
+						</svg>
+						<!--
+			  Icon when menu is open.
+  
+			  Heroicon name: outline/x
+  
+			  Menu open: "block", Menu closed: "hidden"
+			-->
+						<svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+							stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</button>
+				</div>
+				<div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+					<div class="flex-shrink-0 flex items-center">
+
+						<img src="./img/logo.png" class="block lg:hidden h-8 w-auto">
+						<img src="./img/logo.png" class="hidden lg:block h-8 w-auto">
+					</div>
+					<div class="hidden sm:block sm:ml-6">
+						<div class="flex space-x-4">
+							<!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+							<a href="./index.html"
+								class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Blurb</a>
+
+							<a href="./karakter.html"
+								class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+								aria-current="page">Karakter</a>
+
+
+
+						</div>
+					</div>
+				</div>
+				<div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+
+					<!-- Profile dropdown -->
+					<div class="ml-3 relative">
+						<div>
+
+							<button id="js-change-theme" class="focus:outline-none h-8 w-8">🌙</button>
+
+
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Mobile menu, show/hide based on menu state. -->
+		<div class="sm:hidden hidden" id="mobile-menu">
+			<div class="px-2 pt-2 pb-3 space-y-1">
+				<!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+
+				<a href="./index.html"
+					class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Blurb</a>
+
+				<a href="./karakter.html"
+					class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+					aria-current="page">Karakter</a>
+
+
+
+			</div>
+		</div>
+	</nav>
+
+
+	<div class="max-w-4xl h-auto lg:h-screen my-16 container items-center mx-auto px-4 mt-4">
+
+		<div class="owl-carousel">
+			<div class="item">
+				<div class="font-bold text-4xl text-center text-white mt-8 mb-3">Welrod</div>
+				<div class="relative py-3 max-w-xl mx-auto h-full mb-8">
+					<div
+						class="absolute inset-0 bg-black shadow-lg transform -skew-y-6 sm:skew-y-0 lg:-rotate-6 md:-rotate-6 sm:-rotate-2 rounded-3xl">
+					</div>
+
+					<div class="md:flex relative bg-gray-100 rounded-xl p-8 md:p-0 mb-4" id="bio-welrod">
+						<div class="md:flex-none">
+
+							<img class="w-50 h-50 md:h-auto md:rounded-tl-xl rounded-full" src="./img/welrod.png"
+								alt="">
+							<!-- tambah ini bisa bikin bentuk aneh rounded-tr-xl tambah rounded full -->
+
+						</div>
+						<div class="md:flex-grow ">
+							<div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+								<div class="grid grid-cols-1 divide-y divide-green-500 object-none object-right-bottom">
+									<div>Tipe: Prajurit</div>
+									<div>Spesialis: Logistik</div>
+									<div>Aliansi: Aegis, E.C.R</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+
+					<div class="relative bg-gray-100 rounded-xl mb-3 " id="deskripsi-welrod">
+						<div class="p-8 text-center space-y-4 text-justify">
+							Sosok pria yang tenang, dia tidak ragu melakukan apa pun untuk
+							melindungi orang-orang yanag dia kenal dekat. Dia selalu berpikir
+							tentang balas budi kepada mereka, tetapi juga selalu tidak tahu balas
+							budi seperti apa yang harus dia lakukan, kadang malah membuatnya
+							berpikir berlebihan tentang hal itu.
+						</div>
+					</div>
+
+				</div>
+
+
+
+			</div>
+
+
+			<div class="item">
+				<div class="font-bold text-4xl text-center text-white mt-8 mb-3">A02</div>
+				<div class="relative py-3 max-w-xl mx-auto h-full mb-8">
+					<div
+						class="absolute inset-0 bg-black shadow-lg transform -skew-y-6 sm:skew-y-0 lg:-rotate-6 md:-rotate-6 sm:-rotate-2 rounded-3xl">
+					</div>
+
+					<div class="md:flex relative bg-gray-100 rounded-xl p-8 md:p-0 mb-4 " id="bio-a02">
+						<div class="md:flex-none">
+
+							<img class="w-50 h-50 md:h-auto md:rounded-tl-xl sm:rounded-full rounded-full"
+								src="./img/a02.png" alt="">
+							<!-- tambah ini bisa bikin bentuk aneh rounded-tr-xl tambah rounded full -->
+
+						</div>
+						<div class="md:flex-grow ">
+							<div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+								<div class="grid grid-cols-1 divide-y divide-green-500 object-none object-right-bottom">
+									<div>Tipe: Prajurit</div>
+									<div>Spesialis: Logistik</div>
+									<div>Aliansi: Aegis, E.C.R</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+
+					<div class="relative bg-gray-100 rounded-xl mb-3 " id="deskripsi-a02">
+						<div class="p-8 text-center space-y-4 text-justify">
+							Satu-satunya anggota di tim Welrod, gadis riang yang suka membaca komik.
+							Dia memiliki tangan prostetik dan sumber kekuatan Exceed yang dapat menguatkan
+							tubuhnya berkali-kali lipat. Berkat kekuatan itu, dia dijuluki Pahlawan Markas
+							karena sering menyelamatkan nyawa prajurit. Sayangnya, sekali dia melihat orang yang dalam
+							bahaya, dia tetap akan menyelamatkannya, meskipun nyawanya sendiri ikut terancam.
+						</div>
+					</div>
+
+				</div>
+
+
+
+			</div>
+
+			<div class="item">
+				<div class="font-bold text-4xl text-center text-white mt-8 mb-3">Angelica</div>
+				<div class="relative py-3 max-w-xl mx-auto h-full mb-8">
+					<div
+						class="absolute inset-0 bg-black shadow-lg transform -skew-y-6 sm:skew-y-0 lg:-rotate-6 md:-rotate-6 sm:-rotate-2 rounded-3xl">
+					</div>
+
+					<div class="md:flex relative bg-gray-100 rounded-xl p-8 md:p-0 mb-4 " id="bio-angelica">
+						<div class="md:flex-none">
+
+							<img class="w-50 h-50 md:h-auto md:rounded-tl-xl sm:rounded-full rounded-full"
+								src="./img/angelica.png" alt="">
+							<!-- tambah ini bisa bikin bentuk aneh rounded-tr-xl tambah rounded full -->
+
+						</div>
+						<div class="md:flex-grow ">
+							<div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+								<div class="grid grid-cols-1 divide-y divide-green-500 object-none object-right-bottom">
+									<div>Tipe: Non-Prajurit</div>
+									<div>Spesialis: -</div>
+									<div>Aliansi: Aegis</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+
+					<div class="relative bg-gray-100 rounded-xl mb-3 " id="deskripsi-angelica">
+						<div class="p-8 text-center space-y-4 text-justify">
+							Perempuan yang merasa punya banyak bakat, awalnya bekerja sebagai sekretaris Daniel, tetapi
+							mendadak
+							berhenti karena suatu alasan. Dia dapat dengan mudah melanjutkan pekerjaan menjadi perancang
+							seragam Aegis
+							hanya berbekal sedikit pengalaman. Karena merasa bisa segala hal, dulu dia sering berpikir
+							dapat melakukan
+							semuanya sendirian, sekarang dia menyesal telah meninggalkan rumah, teman, dan orang
+							tuanya.
+
+						</div>
+					</div>
+
+				</div>
+
+
+
+			</div>
+
+			<div class="item">
+				<div class="font-bold text-4xl text-center text-white mt-8 mb-3">Daniel</div>
+				<div class="relative py-3 max-w-xl mx-auto h-full mb-8">
+					<div
+						class="absolute inset-0 bg-black shadow-lg transform -skew-y-6 sm:skew-y-0 lg:-rotate-6 md:-rotate-6 sm:-rotate-2 rounded-3xl">
+					</div>
+
+					<div class="md:flex relative bg-gray-100 rounded-xl p-8 md:p-0 mb-4 " id="bio-daniel">
+						<div class="md:flex-none">
+
+							<img class="w-50 h-50 md:h-auto md:rounded-tl-xl sm:rounded-full rounded-full"
+								src="./img/daniel.png" alt="">
+							<!-- tambah ini bisa bikin bentuk aneh rounded-tr-xl tambah rounded full -->
+
+						</div>
+						<div class="md:flex-grow ">
+							<div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+								<div class="grid grid-cols-1 divide-y divide-green-500 object-none object-right-bottom">
+									<div>Tipe: Atasan Markas</div>
+									<div>Spesialis: -</div>
+									<div>Aliansi: Aegis</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+
+					<div class="relative bg-gray-100 rounded-xl mb-3 " id="deskripsi-daniel">
+						<div class="p-8 text-center space-y-4 text-justify">
+							Pria yang menjabat sebagai atasan markas 3 Aegis, dia selalu memperhitungkan segala
+							kemungkinan untuk mencapai tujuan, sehingga dia dapat memilih jalan yang dapat mengurangi
+							risiko buruk terbesar. Namun, karena dedikasi tingginya terhadap Aegis, membuatnya sering
+							bekerja keras sampai mengalami masalah tidur dan sakit kepala.
+						</div>
+					</div>
+
+				</div>
+
+
+
+			</div>
+
+			<div class="item">
+				<div class="font-bold text-4xl text-center text-white mt-8 mb-3">Neoman</div>
+				<div class="relative py-3 max-w-xl mx-auto h-full mb-8">
+					<div
+						class="absolute inset-0 bg-black shadow-lg transform -skew-y-6 sm:skew-y-0 lg:-rotate-6 md:-rotate-6 sm:-rotate-2 rounded-3xl">
+					</div>
+
+					<div class="md:flex relative bg-gray-100 rounded-xl p-8 md:p-0 mb-4 " id="bio-neoman">
+						<div class="md:flex-none">
+
+							<img class="w-50 h-50 md:h-auto md:rounded-tl-xl sm:rounded-full rounded-full"
+								src="./img/neoman.png" alt="">
+							<!-- tambah ini bisa bikin bentuk aneh rounded-tr-xl tambah rounded full -->
+
+						</div>
+						<div class="md:flex-grow ">
+							<div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+								<div class="grid grid-cols-1 divide-y divide-green-500 object-none object-right-bottom">
+									<div>Tipe: Prajurit</div>
+									<div>Spesialis: Kombat</div>
+									<div>Aliansi: Aegis</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+
+					<div class="relative bg-gray-100 rounded-xl mb-3 " id="deskripsi-neoman">
+						<div class="p-8 text-center space-y-4 text-justify">
+							Ketua dari Gusus Tugas Aegis (<i>Task Force Aegis</i>) markas 1, perannya bertujuan untuk
+							menjalankan misi-misi khusus dan berbahaya yang diperintahkan langsung oleh atasan markas.
+							Meskipun tugas itu membuat hidupnya berada dalam bayang-bayang kematian, dia selalu berhasil
+							kembali dengan selamat. Di balik pencapaian besar itu, sikap tegasnya kadang
+							membuatnya
+							terlihat kasar dan tidak pandang bulu.
+						</div>
+					</div>
+
+				</div>
+
+
+
+			</div>
+
+			<div class="item">
+				<div class="font-bold text-4xl text-center text-white mt-8 mb-3">Anthony</div>
+				<div class="relative py-3 max-w-xl mx-auto h-full mb-8">
+					<div
+						class="absolute inset-0 bg-black shadow-lg transform -skew-y-6 sm:skew-y-0 lg:-rotate-6 md:-rotate-6 sm:-rotate-2 rounded-3xl">
+					</div>
+
+					<div class="md:flex relative bg-gray-100 rounded-xl p-8 md:p-0 mb-4 " id="bio-anthony">
+						<div class="md:flex-none">
+
+							<img class="w-50 h-50 md:h-auto md:rounded-tl-xl sm:rounded-full rounded-full"
+								src="./img/anthony.png" alt="???">
+							<!-- tambah ini bisa bikin bentuk aneh rounded-tr-xl tambah rounded full -->
+
+						</div>
+						<div class="md:flex-grow ">
+							<div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+								<div class="grid grid-cols-1 divide-y divide-green-500 object-none object-right-bottom">
+									<div>Tipe: Prajurit</div>
+									<div>Spesialis: Middleman</div>
+									<div>Aliansi: Aegis</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+
+					<div class="relative bg-gray-100 rounded-xl mb-3 " id="deskripsi-anthony">
+						<div class="p-8 text-center space-y-4 text-justify">
+							Ketua dari tim 403 Middleman, tim yang bekerja sebagai penghubung antara Aegis dengan
+							dunia luar untuk kepentingan pengiriman informasi, barang, dan orang; baik dari dalam
+							ke luar Aegis atau sebaliknya. Sosoknya cerdik, loyal, dan kritis; membuatnya selalu
+							berhasil lolos dari situasi sesulit apa pun bersama timnya. Kepercayaan diri yanag tinggi
+							membuat rekan-rekannya tidak ragu mengikuti rencana Anthony, meskipun rencana tersebut
+							kadang terasa nekat.
+						</div>
+					</div>
+
+				</div>
+
+
+
+			</div>
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+	<script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/tippy.js@4"></script>
+	<!-- max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0 -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+		integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="./script/karakter.js"></script>
+
+
+
+</body>
+
+</html>
