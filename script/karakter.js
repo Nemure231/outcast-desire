@@ -5,7 +5,7 @@ tippy('.link', {
 $(function () {
     $('.owl-carousel').owlCarousel({
         margin: 35,
-        autoWidth:true,
+        // autoWidth:true,
         loop: false,
         items: 1,
         stagePadding: 100
