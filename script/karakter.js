@@ -6,9 +6,11 @@ $(function () {
     $('.owl-carousel').owlCarousel({
         margin: 35,
         // autoWidth:true,
-        loop: false,
+        responsiveClass:true,
+        // loop: false,
         items: 1,
-        stagePadding: 100
+        stagePadding: 100,
+        
     });
 
 
