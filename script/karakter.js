@@ -3,14 +3,15 @@ tippy('.link', {
 })
 
 $(function () {
+ 
     $('.owl-carousel').owlCarousel({
         margin: 35,
-        // autoWidth:true,
-        // responsiveClass:true,
-        // loop: false,
+        
         nav:true,
+       
+        navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
         items: 1,
-        stagePadding: 65,
+        stagePadding: 60,
         
     });
 
