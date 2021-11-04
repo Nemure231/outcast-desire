@@ -10,24 +10,24 @@ $(function () {
 
     if (mediaQuerySm.matches) {
         var pd = 35;
-        var nav = true;
+        // var nav = false;
     }
 
     if (mediaQueryMd.matches) {
         var pd = 35;
-        var nav = true;
+        // var nav = false;
     }
     if (mediaQueryLg.matches) {
         var pd = 100;
-        var nav = true;
+        // var nav = false;
     }
  
     $('.owl-carousel').owlCarousel({
         margin: 35,
         
-        nav:nav,
+        // nav:nav,
        
-        navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
+        // navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
         items: 1,
         stagePadding: pd,
         
