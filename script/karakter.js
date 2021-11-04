@@ -3,15 +3,33 @@ tippy('.link', {
 })
 
 $(function () {
+
+    const mediaQuerySm = window.matchMedia('(min-width: 640px)');
+    const mediaQueryMd = window.matchMedia('(min-width: 768px)');
+    const mediaQueryLg = window.matchMedia('(min-width: 1024px)');
+
+    if (mediaQuerySm.matches) {
+        var pd = 35;
+        var nav = false;
+    }
+
+    if (mediaQueryMd.matches) {
+        var pd = 100;
+        var nav = true;
+    }
+    if (mediaQueryLg.matches) {
+        var pd = 100;
+        var nav = true;
+    }
  
     $('.owl-carousel').owlCarousel({
         margin: 35,
         
-        nav:true,
+        nav:nav,
        
         navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
         items: 1,
-        stagePadding: 35,
+        stagePadding: pd,
         
     });
 
