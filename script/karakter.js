@@ -10,11 +10,11 @@ $(function () {
 
     if (mediaQuerySm.matches) {
         var pd = 35;
-        var nav = false;
+        var nav = true;
     }
 
     if (mediaQueryMd.matches) {
-        var pd = 100;
+        var pd = 35;
         var nav = true;
     }
     if (mediaQueryLg.matches) {
