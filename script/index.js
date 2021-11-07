@@ -1,4 +1,14 @@
-	//Init tooltips
+function ready(fn) {
+    if (document.readyState != 'loading') {
+        fn();
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
+}
+
+ready(function () {
+
+    //Init tooltips
     tippy('.link', {
         placement: 'bottom'
     })
@@ -37,3 +47,5 @@
             mobile.classList.add('hidden');
         }
     });
+
+});
