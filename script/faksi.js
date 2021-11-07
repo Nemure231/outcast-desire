@@ -8,6 +8,7 @@ function ready(fn) {
 }
 
 ready(function () {
+    // $(document).ready(function () {
 
     tippy('.link', {
         placement: 'bottom'
@@ -78,59 +79,45 @@ ready(function () {
         }
     });
 
-    const tombolTabTujuan = document.getElementById('tombol-tab-tujuan');
-    const tombolTabRelasi = document.getElementById('tombol-tab-relasi');
+    const tombolTabMarkasAegis = document.getElementById('tombol-tab-markas-aegis');
+    const tombolTabRelasiAegis = document.getElementById('tombol-tab-relasi-aegis');
 
-    const tabTujuan = document.getElementById('tab-tujuan');
-    const tabRelasi = document.getElementById('tab-relasi');
+    const tabMarkasAegis = document.getElementById('tab-markas-aegis');
+    const tabRelasiAegis = document.getElementById('tab-relasi-aegis');
 
-    const tabRelasiUmpet = document.getElementById('tab-relasi-umpet');
-    const tabTujuanUmpet = document.getElementById('tab-tujuan-umpet');
-
-    // const tabBum = document.getElementById('bm');
-
-    tombolTabTujuan.addEventListener('click', () => {
-
-        tombolTabRelasi.classList.remove('rounded-t', 'border-l', 'border-t', 'border-r', 'text-blue-700');
-        tombolTabRelasi.classList.add('text-blue-500', 'hover:text-blue-800');
-
-        tombolTabTujuan.classList.remove('text-blue-500', 'hover:text-blue-800');
-        tombolTabTujuan.classList.add('rounded-t', 'border-l', 'border-t', 'border-r', 'text-blue-700');
-
-        tabTujuan.classList.remove('mr-1');
-        tabTujuan.classList.add('-mb-px', 'mr-1');
-    });
+    const tabRelasiUmpetAegis = document.getElementById('tab-relasi-umpet-aegis');
+    const tabMarkasUmpetAegis = document.getElementById('tab-markas-umpet-aegis');
 
 
-    tombolTabTujuan.addEventListener('click', () => {
+    tombolTabMarkasAegis.addEventListener('click', () => {
 
-        tombolTabRelasi.classList.remove('rounded-t', 'border-l', 'border-t', 'border-r', 'text-blue-700');
-        tombolTabRelasi.classList.add('text-blue-500', 'hover:text-blue-800');
+        tombolTabRelasiAegis.classList.remove('rounded-t', 'border-l', 'border-t', 'border-r', 'text-blue-700');
+        tombolTabRelasiAegis.classList.add('text-blue-500', 'hover:text-blue-800');
 
-        tombolTabTujuan.classList.remove('text-blue-500', 'hover:text-blue-800');
-        tombolTabTujuan.classList.add('rounded-t', 'border-l', 'border-t', 'border-r', 'text-blue-700');
+        tombolTabMarkasAegis.classList.remove('text-blue-500', 'hover:text-blue-800');
+        tombolTabMarkasAegis.classList.add('rounded-t', 'border-l', 'border-t', 'border-r', 'text-blue-700');
 
-        tabTujuan.classList.remove('mr-1');
-        tabTujuan.classList.add('-mb-px', 'mr-1');
+        tabMarkasAegis.classList.remove('mr-1');
+        tabMarkasAegis.classList.add('-mb-px', 'mr-1');
 
-        tabRelasiUmpet.classList.add('hidden');
-        tabTujuanUmpet.classList.remove('hidden');
+        tabRelasiUmpetAegis.classList.add('hidden');
+        tabMarkasUmpetAegis.classList.remove('hidden');
 
     });
 
-    tombolTabRelasi.addEventListener('click', () => {
+    tombolTabRelasiAegis.addEventListener('click', () => {
 
-        tombolTabRelasi.classList.add('rounded-t', 'border-l', 'border-t', 'border-r', 'text-blue-700');
-        tombolTabRelasi.classList.remove('text-blue-500', 'hover:text-blue-800');
+        tombolTabRelasiAegis.classList.add('rounded-t', 'border-l', 'border-t', 'border-r', 'text-blue-700');
+        tombolTabRelasiAegis.classList.remove('text-blue-500', 'hover:text-blue-800');
 
-        tombolTabTujuan.classList.add('text-blue-500', 'hover:text-blue-800');
-        tombolTabTujuan.classList.remove('rounded-t', 'border-l', 'border-t', 'border-r', 'text-blue-700');
+        tombolTabMarkasAegis.classList.add('text-blue-500', 'hover:text-blue-800');
+        tombolTabMarkasAegis.classList.remove('rounded-t', 'border-l', 'border-t', 'border-r', 'text-blue-700');
 
-        tabTujuan.classList.add('mr-1');
-        tabTujuan.classList.remove('-mb-px', 'mr-1');
+        tabRelasiAegis.classList.remove('mr-1');
+        tabRelasiAegis.classList.add('-mb-px', 'mr-1');
 
-        tabRelasiUmpet.classList.remove('hidden');
-        tabTujuanUmpet.classList.add('hidden');
+        tabRelasiUmpetAegis.classList.remove('hidden');
+        tabMarkasUmpetAegis.classList.add('hidden');
     });
 
 
@@ -142,4 +129,68 @@ ready(function () {
             mobile.classList.add('hidden');
         }
     });
+
+
+    var kontenAegis = document.getElementById('konten-aegis');
+    var kontenEcr = document.getElementById('konten-ecr');
+    var kontenGaia = document.getElementById('konten-gaia');
+
+    var tombolAegis = document.getElementById('tombol-aegis');
+    var tombolEcr = document.getElementById('tombol-ecr');
+    var tombolGaia = document.getElementById('tombol-gaia');
+
+    const klikFaksi = document.getElementsByClassName('klik-faksi');
+
+
+    Array.prototype.forEach.call(klikFaksi, function (element) {
+        element.addEventListener('click', function () {
+
+            if (element.id == 'tombol-ecr') {
+                if (kontenEcr.classList.contains('hidden')) {
+                    kontenEcr.classList.remove('hidden');
+                }
+
+                if (!kontenAegis.classList.contains('hidden')) {
+                    kontenAegis.classList.add('hidden');
+                }
+
+                if (!kontenGaia.classList.contains('hidden')) {
+                    kontenGaia.classList.add('hidden');
+                }
+            }
+
+            if (element.id == 'tombol-gaia') {
+                if (kontenGaia.classList.contains('hidden')) {
+                    kontenGaia.classList.remove('hidden');
+                }
+
+                if (!kontenAegis.classList.contains('hidden')) {
+                    kontenAegis.classList.add('hidden');
+                }
+
+                if (!kontenEcr.classList.contains('hidden')) {
+                    kontenEcr.classList.add('hidden');
+                }
+            }
+
+            if (element.id == 'tombol-aegis') {
+                if (kontenAegis.classList.contains('hidden')) {
+                    kontenAegis.classList.remove('hidden');
+                }
+
+                if (!kontenGaia.classList.contains('hidden')) {
+                    kontenGaia.classList.add('hidden');
+                }
+
+                if (!kontenEcr.classList.contains('hidden')) {
+                    kontenEcr.classList.add('hidden');
+                }
+            }
+
+        });
+    });
+
+ 
+
+
 });
